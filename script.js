@@ -10,12 +10,16 @@ const generateTarget = () => {
 const compareGuesses = (humanGuess, computerGuess, targetGuess) => {
   const humanDifference = Math.abs(targetGuess - humanGuess);
   const computerDifference = Math.abs(targetGuess - computerGuess);
+  
     /* if(humanDifference <= computerDifference) {
       return true;
     } else {
       return false;
     } */
+  
   return humanDifference <= computerDifference;
+}
+
 const updateScore = winner => {
   if (winner === 'human') {
     humanScore++;
@@ -26,5 +30,3 @@ const updateScore = winner => {
 }
 
 const advanceRound = () => currentRoundNumber++;
-
-}
